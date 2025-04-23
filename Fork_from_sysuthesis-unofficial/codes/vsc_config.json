@@ -1,0 +1,45 @@
+"latex-workshop.latex.tools": [
+    {
+      "name": "latexmkpdf",
+      "command": "latexmk",
+      "args":
+        [
+          "-synctex=1", "%DOCFILE%",
+          "-halt-on-error", "-file-line-error",
+          "-pdf", "-interaction=nonstopmode"
+        ]
+    },
+    {
+      "name": "latexmkxe",
+      "command": "latexmk",
+      "args":
+        [
+          "-synctex=1", "%DOCFILE%",
+          "-halt-on-error", "-file-line-error", 
+          "-xelatex", "-interaction=nonstopmode",
+        ]
+    },
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmkpdf",
+      "tools": [ "latexmkpdf" ]
+    },
+    {
+      "name": "latexmkxe",
+      "tools": [ "latexmkxe" ]
+    }
+  ],
+  "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.view.pdf.viewer": "tab"
+  // "latex-workshop.view.pdf.viewer": "external",
+  // "latex-workshop.view.pdf.ref.viewer": "external",
+  // "latex-workshop.view.pdf.external.viewer.command": "<SumatraPDFROOT>/SumatraPDF.exe",
+  // "latex-workshop.view.pdf.external.viewer.args": [
+  //   "-inverse-search", "%PDF%",
+  //   "\"<VSCodeROOT>/bin/code.cmd\" -r -g \"%f:%l\"",
+  // ],
+  // "latex-workshop.view.pdf.external.synctex.command":"<SumatraPDFROOT>/SumatraPDF.exe",
+  // "latex-workshop.view.pdf.external.synctex.args":[
+  //   "-forward-search", "%TEX%", "%LINE%", "%PDF%"
+  // ],

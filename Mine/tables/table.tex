@@ -1,0 +1,21 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{表 9：...}
+\begin{tabular}{l*{8}{c}}
+\hline\hline
+                         &\multicolumn{2}{c}{...}             &\multicolumn{2}{c}{...}             &\multicolumn{2}{c}{...}             &\multicolumn{2}{c}{...}             \\\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
+                         &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}&\multicolumn{1}{c}{(7)}&\multicolumn{1}{c}{(8)}\\
+                         &\multicolumn{1}{c}{y}&\multicolumn{1}{c}{y}&\multicolumn{1}{c}{y}&\multicolumn{1}{c}{y}&\multicolumn{1}{c}{y}&\multicolumn{1}{c}{y}&\multicolumn{1}{c}{y}&\multicolumn{1}{c}{y}\\
+\hline
+Post×Treat               &       1        &       2\sym{**} &      3\sym{**} &      4        &       5\sym{**} &       6\sym{**} &     7        & 8 \\
+                         &     (0.1)         &     (0.2)         &     (0.3)         &     (0.4)         &     (0.5)         &     (0.6)     &     (0.7)         & (0.8)    \\
+\hline
+控制变量                 &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+城市固定效应             &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+年份固定效应             &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+样本量                   &         500         &         500         &       1000       &        1000        &        1500      &       1500        &        2000      &        2000         \\
+\hline\hline
+\multicolumn{9}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{9}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

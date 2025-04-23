@@ -1,0 +1,117 @@
+% !TeX root = ./thesis.tex
+
+\sysusetup{
+	title                   = {中山大学学位论文},
+	title*                  = {A thesis template for Sun Yat-sen University},
+	author                  = {Zhangwj235},
+	author*                 = {Jack},
+	student-id              = {00000000},
+	department              = {xx学院},
+	department*             = {xx},
+	speciality              = {专业},
+	speciality*             = {Major},
+	supervisor              = {xx~教授}, %{李腾~教授 , 黄新飞~教授},
+	supervisor*             = {Prof. xx},%{Prof. Li Teng, Prof. Huang Xinfei},
+	keywords                = {a, b,c},
+	keywords*               = {a, b,c},
+	% date                    = {2025-05-01},   % 默认为今日
+	cover-title             = twoline,   % 默认为 oneline
+	cover-title-firstline   = {xxxx},
+	cover-title-secondline  = {xxxx},
+	cover-title-firstline*  = {xxxx},
+	cover-title-secondline* = {xxxx},
+	% color                   = black,   % 默认为 sysugreen
+	% print                   = twoside,   % 默认为 oneside
+	% number                  = chinese,   % 默认为 arabic
+}
+
+% 设置英文字体
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{inconsolata}
+\usepackage{xeCJK}    %声明宏包，主要用于支持在XeTeX和LuaTeX这两种TeX引擎下的CJK（中文、日文、韩文）排版
+\usepackage{fontspec} %提供了一个配置和使用不同字体的接口 
+\xeCJKsetup{AutoFallBack=true}
+\setCJKmainfont{FandolSong}[FallBack=Simsun.ttf]
+
+% 设置数学字体及相关格式
+\unimathsetup{
+	math-style=ISO,
+	% partial=upright,
+	% nabla=italic,
+}
+
+\setmathfont{XITSMath-Regular}[
+	Extension=.otf,
+	BoldFont=XITSMath-Bold,
+]
+\setmathfont{XITSMath-Regular}[
+	Extension=.otf,
+	range={cal,bfcal},
+	StylisticSet=1,
+]
+
+% \setmathfont{NewCMMath-Book}[
+%     Extension=.otf,
+%     BoldFont=NewCMMath-Bold.otf,
+% ]
+% \setmathfont{NewCMMath-Book}[
+%     Extension=.otf,
+%     range={scr,bfscr},
+%     StylisticSet=1,
+% ]
+
+% 加载额外的宏包
+
+% 定理类环境宏包
+\usepackage{aliascnt}
+\usepackage{amsthm}
+
+% 插图
+\usepackage{graphicx}
+
+% 三线表
+\usepackage{booktabs}
+
+% 图片并排
+\usepackage{subcaption}
+
+% 跨页表格
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage[graphicx]{realboxes}
+\usepackage[figuresright]{rotating}  %表格横置
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}  %上标
+\usepackage{booktabs} %三线式表格
+\usepackage{threeparttable}
+\usepackage{float} %固定位置[H]时用
+\usepackage{caption} %表注
+\newcommand\fnote[1]{\captionsetup{font=small}\caption*{#1}}
+\usepackage{subcaption}
+\usepackage{tabularx}
+\usepackage{multirow}
+
+% 参考文献使用 BibTeX + natbib 宏包
+% 顺序编码制
+%\usepackage[sort&compress]{gbt7714}
+%\bibliographystyle{gbt7714-numerical}
+% 著者-出版年制
+%\bibliographystyle{gbt7714-author-year}
+
+% 参考文献使用 BibLaTeX 宏包
+% \usepackage[backend=biber,style=gb7714-2015]{biblatex}
+%\usepackage[backend=biber,style=gb7714-2015ay]{biblatex}
+\usepackage[backend=biber,style=gb7714-2015ay,uniquelist=false,maxcitenames=2,mincitenames=1,nohashothers=false]{biblatex}
+
+\DefineBibliographyStrings{english}{
+        andincite         = { \& },
+        andincitecn       = {和},
+}
+% 声明 BibLaTeX 的数据库
+\addbibresource{bib/sysu.bib}
+
+% hyperref 宏包在最后调用
+\usepackage{hyperref}
+
+% 配置图片的默认目录
+\graphicspath{{figures/}{pictures/}}
