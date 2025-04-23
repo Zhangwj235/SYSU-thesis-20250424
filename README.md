@@ -12,9 +12,9 @@
 
 ## 使用方法
 
-- 本模版仅支持XeTeX排版引擎，建议使用 Overleaf 进行编译。
+- 本模版仅支持XeTeX排版引擎，建议使用 Overleaf 进行编译。主文件为 thesis.tex，在编译时请选择 xelatex 编译命令
 
-- 本模版需要编译的主文件为 thesis.tex，在编译时请选择 xelatex 编译命令
+- 最直接地使用是，**您只需要下载 Mine文件夹并上传到overleaf即可**。
 
 - 摘要的修改在chapter文件夹里面，关键词的修改在sysusetup.tex中。
 
